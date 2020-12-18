@@ -24,7 +24,7 @@ namespace ClientFormV2_Pippi
             txt_messaggio.Visible = false;
             Errore.Visible = false;
             listBox1.Visible = false;
-
+            Size = new Size(800, 156);
         }
         Socket client;
         IPAddress ipAddr = null;
@@ -74,7 +74,7 @@ namespace ClientFormV2_Pippi
                 txt_serverPort.Enabled = false;
                 button1.Enabled = false;
 
-                Size = new Size(501, 399);
+                Size = new Size(800, 399);
                 button2.Visible = true;
                 txt_messaggio.Visible = true;
                 Errore.Visible = true;
@@ -119,7 +119,8 @@ namespace ClientFormV2_Pippi
                     client.Close();
                     client.Dispose();
                     Errore.Text = "Ti sei disconneso :)";
-                    Size = new Size(501, 156);
+                    Size = new Size(800, 156);
+                    listBox1.Items.Clear();
 
                     txt_serverIp.Enabled = true;
                     txt_serverPort.Enabled = true;
@@ -147,7 +148,7 @@ namespace ClientFormV2_Pippi
                 client.Close();
                 client.Dispose();
                 Errore.Text = "Ti sei disconneso :)";
-                Size = new Size(501, 156);
+                Size = new Size(800, 156);
 
                 txt_serverIp.Enabled = true;
                 txt_serverPort.Enabled = true;
